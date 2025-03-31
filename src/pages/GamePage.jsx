@@ -146,8 +146,11 @@ export default function GamePage() {
             }`}
             onClick={() => {
               if (!isMyTurn) return;
-              if (isGuessMode && !excluded.includes(char.id)) {
-                handleGuess(char.name);
+
+              if (isGuessMode) {
+                if (!excluded.includes(char.id)) {
+                  handleGuess(char.name);
+                }
               } else {
                 toggleExcluded(char.id);
               }
