@@ -108,25 +108,27 @@ export default function GamePage() {
 
   return (
     <div className="p-4">
-      <h2 className="text-sm text-gray-500 mb-1">
-        Код кімнати: <span className="font-mono">{roomId}</span>
-      </h2>
-      <h2 className="text-xl font-semibold mb-1">
-        Ви — {myName} ({role})
-      </h2>
-      <h3 className="text-md mb-2 text-gray-600">
-        Суперник: {opponentName || "Очікуємо..."}
-      </h3>
+      <div className="flex justify-between  mb-4">
+        <div>
+          <h2 className="text-sm text-gray-500 mb-1">
+            Код кімнати: <span className="font-mono">{roomId}</span>
+          </h2>
+          <h2 className="text-xl font-semibold mb-1">
+            Ви — {myName} ({role})
+          </h2>
+          <h3 className="text-md mb-2 text-gray-600">
+            Суперник: {opponentName || "Очікуємо..."}
+          </h3>
+        </div>
 
-      <div className="flex items-center gap-2 mb-4">
-        <img
-          src={myCharacter?.img}
-          alt={myCharacter?.name}
-          className="w-12 h-12 object-contain border rounded"
-        />
-        <span className="text-lg font-medium">
-          Твій персонаж: {myCharacter?.name}
-        </span>
+        <div className="flex flex-col items-center gap-2 mb-4">
+          <span className="text-lg font-medium">Твій персонаж:</span>
+          <img
+            src={myCharacter?.img}
+            alt={myCharacter?.name}
+            className="h-30 object-contain border rounded"
+          />
+        </div>
       </div>
 
       <h4 className="mb-4 text-green-600 font-medium">
@@ -159,27 +161,28 @@ export default function GamePage() {
             <img
               src={char.img}
               alt={char.name}
-              className="w-full h-24 object-contain mb-1"
+              className="w-full h-30 object-contain mb-1"
             />
-            <p className="text-sm font-medium">{char.name}</p>
           </div>
         ))}
       </div>
 
       {isMyTurn && !isGuessMode && (
         <>
-          <button
-            className="mt-6 bg-yellow-500 text-white px-4 py-2 rounded"
-            onClick={endTurn}
-          >
-            Завершити хід
-          </button>
-          <button
-            className="mt-4 bg-green-600 text-white px-4 py-2 rounded"
-            onClick={() => setIsGuessMode(true)}
-          >
-            Я знаю хто!
-          </button>
+          <div className="flex justify-between mt-4">
+            <button
+              className="mt-6 bg-yellow-500 text-white px-4 py-2 rounded"
+              onClick={endTurn}
+            >
+              Завершити хід
+            </button>
+            <button
+              className="mt-6 bg-green-600 text-white px-4 py-2 rounded"
+              onClick={() => setIsGuessMode(true)}
+            >
+              Я знаю хто!
+            </button>
+          </div>
         </>
       )}
     </div>
