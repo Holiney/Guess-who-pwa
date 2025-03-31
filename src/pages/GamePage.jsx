@@ -100,7 +100,23 @@ export default function GamePage() {
       <h2 className="text-xl font-semibold mb-2">
         {role ? `Ви — ${role}` : "Завантаження ролі..."}
       </h2>
-      <h3 className="text-lg mb-2">Твій персонаж: {myCharacter?.name}</h3>
+      <h2 className="text-sm text-gray-500 mb-2">
+        Код кімнати:{" "}
+        <span className="font-mono bg-gray-200 px-2 py-1 rounded">
+          {roomId}
+        </span>
+      </h2>
+      <div className="flex flex-col items-center gap-2 mb-4">
+        <span className="text-lg font-medium">
+          Твій персонаж: {myCharacter?.name}
+        </span>
+        <img
+          src={myCharacter?.img}
+          alt={myCharacter?.name}
+          className=" h-25 object-contain border rounded"
+        />
+      </div>
+
       <h4 className="mb-4 text-green-600 font-medium">
         {isMyTurn ? "Твій хід" : "Хід суперника"}
       </h4>
