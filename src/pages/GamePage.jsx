@@ -15,7 +15,7 @@ export default function GamePage() {
   const [myName, setMyName] = useState("");
   const [opponentName, setOpponentName] = useState("");
   const [isGuessMode, setIsGuessMode] = useState(false);
-
+  const [showExitConfirm, setShowExitConfirm] = useState(false);
   useEffect(() => {
     const uid = auth.currentUser?.uid;
     if (!uid) return;
@@ -52,9 +52,12 @@ export default function GamePage() {
   }, [roomId, role]);
 
   const toggleExcluded = (id) => {
-    setExcluded((prev) =>
-      prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
-    );
+    setExcluded((prev) => {
+      if (prev.includes(id)) {
+        return prev;
+      }
+      return [...prev, id];
+    });
   };
 
   const endTurn = async () => {
@@ -108,8 +111,16 @@ export default function GamePage() {
 
   return (
     <div className="p-4">
-      <div className="flex justify-between  mb-4">
+      <div className="flex justify-between  ">
         <div>
+          <div className="flex  ">
+            <button
+              className="text-sm text-red-600 border border-red-600 px-3 py-1 rounded hover:bg-red-100"
+              onClick={() => setShowExitConfirm(true)}
+            >
+              Вийти з гри
+            </button>
+          </div>
           <h2 className="text-sm text-gray-500 mb-1">
             Код кімнати: <span className="font-mono">{roomId}</span>
           </h2>
@@ -121,12 +132,12 @@ export default function GamePage() {
           </h3>
         </div>
 
-        <div className="flex flex-col items-center gap-2 mb-4">
+        <div className="flex flex-col items-center gap-2">
           <span className="text-lg font-medium">Твій персонаж:</span>
           <img
             src={myCharacter?.img}
             alt={myCharacter?.name}
-            className="h-30 object-contain border rounded"
+            className="h-27 object-contain border rounded"
           />
         </div>
       </div>
@@ -135,11 +146,11 @@ export default function GamePage() {
         {isMyTurn ? "Твій хід" : "Хід суперника"}
       </h4>
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-6 gap-4">
         {characters.map((char) => (
           <div
             key={char.id}
-            className={`border rounded p-2 text-center cursor-pointer transition ${
+            className={`border rounded text-center cursor-pointer transition ${
               excluded.includes(char.id)
                 ? "opacity-30 grayscale"
                 : isGuessMode
@@ -161,7 +172,7 @@ export default function GamePage() {
             <img
               src={char.img}
               alt={char.name}
-              className="w-full h-30 object-contain mb-1"
+              className="w-full h-full object-cover"
             />
           </div>
         ))}
@@ -184,6 +195,27 @@ export default function GamePage() {
             </button>
           </div>
         </>
+      )}
+      {showExitConfirm && (
+        <div className="fixed inset-0 backdrop-blur-sm bg-white/10 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded shadow-md text-center">
+            <p className="mb-4 text-lg font-semibold">Точно вийти з гри?</p>
+            <div className="flex justify-center gap-4">
+              <button
+                className="px-4 py-2 bg-gray-300 rounded"
+                onClick={() => setShowExitConfirm(false)}
+              >
+                Скасувати
+              </button>
+              <button
+                className="px-4 py-2 bg-red-600 text-white rounded"
+                onClick={() => (window.location.href = "/")}
+              >
+                Вийти
+              </button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
