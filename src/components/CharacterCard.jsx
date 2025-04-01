@@ -18,10 +18,16 @@ export default function CharacterCard({
     }
   };
 
+  const cardClass = `${styles.flipCard}`;
+  const innerClass = `${styles.inner} ${isExcluded ? styles.flipped : ""}`;
+  const frontClass = `${styles.front} ${
+    isGuessMode && !isExcluded ? styles.glow : ""
+  }`;
+
   return (
-    <div className={styles.flipCard} onClick={handleClick}>
-      <div className={`${styles.inner} ${isExcluded ? styles.flipped : ""}`}>
-        <div className={styles.front}>
+    <div className={cardClass} onClick={handleClick}>
+      <div className={innerClass}>
+        <div className={frontClass}>
           <img
             src={character.img}
             alt={character.name}
