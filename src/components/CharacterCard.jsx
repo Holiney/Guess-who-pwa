@@ -33,6 +33,7 @@ export default function CharacterCard({
             alt={character.name}
             className="w-full h-full object-contain rounded"
           />
+          <p>{character.name}</p>
         </div>
         <div className={styles.back}>
           <span>?</span>

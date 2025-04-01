@@ -33,8 +33,12 @@
 
 .front {
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
 }
-
+.front p {
+  bottom: 0;
+}
 .back {
   background: linear-gradient(145deg, #1f2937, #111827);
   color: white;
