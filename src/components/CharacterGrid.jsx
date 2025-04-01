@@ -10,7 +10,7 @@ export default function CharacterGrid({
   toggleExcluded,
 }) {
   return (
-    <div className="grid grid-cols-6 gap-4">
+    <div className="grid grid-cols-5 gap-4">
       {characters.map((char) => (
         <CharacterCard
           key={char.id}
