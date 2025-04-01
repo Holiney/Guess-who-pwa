@@ -1,303 +1,53 @@
-import anna from "../assets/anna.png";
-import bob from "../assets/bob.png";
-import lena from "../assets/lena.png";
-import mike from "../assets/mike.png";
-import sophie from "../assets/sophie.png";
-import tom from "../assets/tom.png";
-import ira from "../assets/ira.png";
-import dan from "../assets/dan.png";
-import nina from "../assets/nina.png";
-import leo from "../assets/leo.png";
-import ella from "../assets/ella.png";
-import fred from "../assets/fred.png";
+import barnacle_boy from "../assets/spongebob/barnacle_boy.png";
+import bubble_bass from "../assets/spongebob/bubble_bass.png";
+import cop from "../assets/spongebob/cop.png";
+import cumber_kevin from "../assets/spongebob/cumber_kevin.png";
+import dirty_bubble from "../assets/spongebob/dirty_bubble.png";
+import fred from "../assets/spongebob/fred.png";
+import gary from "../assets/spongebob/gary.png";
+import harold_squarepants from "../assets/spongebob/harold_squarepants.png";
+import karen from "../assets/spongebob/karen.png";
+import krabs from "../assets/spongebob/krabs.png";
+import larry_lobster from "../assets/spongebob/larry_lobster.png";
+import man_ray from "../assets/spongebob/man_ray.png";
+import margaret from "../assets/spongebob/margaret.png";
+import mermaid_man from "../assets/spongebob/mermaid_man.png";
+import mrs_puff from "../assets/spongebob/mrs_puff.png";
+import neptune from "../assets/spongebob/neptune.png";
+import old_djenkins from "../assets/spongebob/old_djenkins.png";
+import patrick from "../assets/spongebob/patrick.png";
+import pearl_krabs from "../assets/spongebob/pearl_krabs.png";
+import pllankton from "../assets/spongebob/pllankton.png";
+import sandy from "../assets/spongebob/sandy.png";
+import sponge_bob from "../assets/spongebob/sponge_bob.png";
+import squidward from "../assets/spongebob/squidward.png";
+import tattletale_strangler from "../assets/spongebob/tattletale strangler.png";
+import triton from "../assets/spongebob/triton.png";
 
 export const characters = [
-  {
-    id: 1,
-    name: "Anna",
-    img: anna,
-    attributes: {
-      gender: "female",
-      glasses: false,
-      beard: false,
-      hat: false,
-      hairColor: "blonde",
-    },
-  },
-  {
-    id: 2,
-    name: "Bob",
-    img: bob,
-    attributes: {
-      gender: "male",
-      glasses: true,
-      beard: true,
-      hat: false,
-      hairColor: "black",
-    },
-  },
-  {
-    id: 3,
-    name: "Lena",
-    img: lena,
-    attributes: {
-      gender: "female",
-      glasses: false,
-      beard: false,
-      hat: false,
-      hairColor: "red",
-    },
-  },
-  {
-    id: 4,
-    name: "Mike",
-    img: mike,
-    attributes: {
-      gender: "male",
-      glasses: false,
-      beard: true,
-      hat: false,
-      hairColor: "blonde",
-    },
-  },
-  {
-    id: 5,
-    name: "Sophie",
-    img: sophie,
-    attributes: {
-      gender: "female",
-      glasses: true,
-      beard: false,
-      hat: false,
-      hairColor: "brown",
-    },
-  },
-  {
-    id: 6,
-    name: "Tom",
-    img: tom,
-    attributes: {
-      gender: "male",
-      glasses: false,
-      beard: true,
-      hat: false,
-      hairColor: "bald",
-    },
-  },
-  {
-    id: 7,
-    name: "Ira",
-    img: ira,
-    attributes: {
-      gender: "female",
-      glasses: false,
-      beard: false,
-      hat: true,
-      hairColor: "black",
-    },
-  },
-  {
-    id: 8,
-    name: "Dan",
-    img: dan,
-    attributes: {
-      gender: "male",
-      glasses: false,
-      beard: false,
-      hat: true,
-      hairColor: "brown",
-    },
-  },
-  {
-    id: 9,
-    name: "Nina",
-    img: nina,
-    attributes: {
-      gender: "female",
-      glasses: false,
-      beard: false,
-      hat: false,
-      hairColor: "black",
-    },
-  },
-  {
-    id: 10,
-    name: "Leo",
-    img: leo,
-    attributes: {
-      gender: "male",
-      glasses: true,
-      beard: false,
-      hat: false,
-      hairColor: "gray",
-    },
-  },
-  {
-    id: 11,
-    name: "Ella",
-    img: ella,
-    attributes: {
-      gender: "female",
-      glasses: false,
-      beard: false,
-      hat: false,
-      hairColor: "blonde",
-    },
-  },
-  {
-    id: 12,
-    name: "Fred",
-    img: fred,
-    attributes: {
-      gender: "male",
-      glasses: false,
-      beard: true,
-      hat: false,
-      hairColor: "brown",
-    },
-  },
-  {
-    id: 13,
-    name: "Olivia",
-    img: anna,
-    attributes: {
-      gender: "female",
-      glasses: true,
-      beard: false,
-      hat: false,
-      hairColor: "blonde",
-    },
-  },
-  {
-    id: 14,
-    name: "Max",
-    img: bob,
-    attributes: {
-      gender: "male",
-      glasses: false,
-      beard: false,
-      hat: true,
-      hairColor: "black",
-    },
-  },
-  {
-    id: 15,
-    name: "Mia",
-    img: lena,
-    attributes: {
-      gender: "female",
-      glasses: true,
-      beard: false,
-      hat: false,
-      hairColor: "red",
-    },
-  },
-  {
-    id: 16,
-    name: "Jack",
-    img: mike,
-    attributes: {
-      gender: "male",
-      glasses: true,
-      beard: false,
-      hat: false,
-      hairColor: "blonde",
-    },
-  },
-  {
-    id: 17,
-    name: "Emma",
-    img: sophie,
-    attributes: {
-      gender: "female",
-      glasses: false,
-      beard: false,
-      hat: true,
-      hairColor: "brown",
-    },
-  },
-  {
-    id: 18,
-    name: "Sam",
-    img: tom,
-    attributes: {
-      gender: "male",
-      glasses: true,
-      beard: false,
-      hat: false,
-      hairColor: "bald",
-    },
-  },
-  {
-    id: 19,
-    name: "Lily",
-    img: ira,
-    attributes: {
-      gender: "female",
-      glasses: true,
-      beard: false,
-      hat: false,
-      hairColor: "black",
-    },
-  },
-  {
-    id: 20,
-    name: "Paul",
-    img: dan,
-    attributes: {
-      gender: "male",
-      glasses: true,
-      beard: true,
-      hat: false,
-      hairColor: "brown",
-    },
-  },
-  {
-    id: 21,
-    name: "Zoe",
-    img: nina,
-    attributes: {
-      gender: "female",
-      glasses: false,
-      beard: false,
-      hat: true,
-      hairColor: "black",
-    },
-  },
-  {
-    id: 22,
-    name: "Oscar",
-    img: leo,
-    attributes: {
-      gender: "male",
-      glasses: false,
-      beard: true,
-      hat: false,
-      hairColor: "gray",
-    },
-  },
-  {
-    id: 23,
-    name: "Grace",
-    img: ella,
-    attributes: {
-      gender: "female",
-      glasses: true,
-      beard: false,
-      hat: false,
-      hairColor: "blonde",
-    },
-  },
-  {
-    id: 24,
-    name: "Victor",
-    img: fred,
-    attributes: {
-      gender: "male",
-      glasses: true,
-      beard: false,
-      hat: true,
-      hairColor: "brown",
-    },
-  },
+  { id: 1, name: "Barnacle Boy", img: barnacle_boy },
+  { id: 2, name: "Bubble Bass", img: bubble_bass },
+  { id: 3, name: "Cop", img: cop },
+  { id: 4, name: "Kevin Cucumber", img: cumber_kevin },
+  { id: 5, name: "Dirty Bubble", img: dirty_bubble },
+  { id: 6, name: "Fred", img: fred },
+  { id: 7, name: "Gary", img: gary },
+  { id: 8, name: "Harold Squarepants", img: harold_squarepants },
+  { id: 9, name: "Karen", img: karen },
+  { id: 10, name: "Mr. Krabs", img: krabs },
+  { id: 11, name: "Larry Lobster", img: larry_lobster },
+  { id: 12, name: "Man Ray", img: man_ray },
+  { id: 13, name: "Margaret", img: margaret },
+  { id: 14, name: "Mermaid Man", img: mermaid_man },
+  { id: 15, name: "Mrs. Puff", img: mrs_puff },
+  { id: 16, name: "King Neptune", img: neptune },
+  { id: 17, name: "Old Man Jenkins", img: old_djenkins },
+  { id: 18, name: "Patrick", img: patrick },
+  { id: 19, name: "Pearl Krabs", img: pearl_krabs },
+  { id: 20, name: "Plankton", img: pllankton },
+  { id: 21, name: "Sandy", img: sandy },
+  { id: 22, name: "SpongeBob", img: sponge_bob },
+  { id: 23, name: "Squidward", img: squidward },
+  { id: 24, name: "Tattletale Strangler", img: tattletale_strangler },
+  { id: 25, name: "Triton", img: triton },
 ];

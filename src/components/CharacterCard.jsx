@@ -28,13 +28,13 @@ export default function CharacterCard({
     <div className={cardClass} onClick={handleClick}>
       <div className={innerClass}>
         <div className={frontClass}>
-          <img
-            src={character.img}
-            alt={character.name}
-            className="w-full h-full object-contain rounded"
+          <div
+            className={styles.image}
+            style={{ backgroundImage: `url(${character.img})` }}
           />
-          <p>{character.name}</p>
+          <p className={styles.name}>{character.name}</p>
         </div>
+
         <div className={styles.back}>
           <span>?</span>
         </div>
