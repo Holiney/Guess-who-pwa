@@ -172,7 +172,7 @@ export default function GamePage() {
             <img
               src={char.img}
               alt={char.name}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain rounded"
             />
           </div>
         ))}
