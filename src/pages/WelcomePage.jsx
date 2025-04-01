@@ -51,7 +51,7 @@ export default function WelcomePage() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
-      <h1 className="text-3xl font-bold mb-4">ХтоЯ — Guess Who?</h1>
+      <h1 className="text-3xl font-bold mb-4">Вгадай хто — Guess Who</h1>
 
       <input
         className="border p-2 mb-2 w-64 text-center"
@@ -81,7 +81,7 @@ export default function WelcomePage() {
           Приєднатися
         </button>
       </div>
-      <p className="fixed bottom-0 mb-5">v0.2</p>
+      <p className="fixed bottom-0 mb-5">v0.21</p>
     </div>
   );
 }
