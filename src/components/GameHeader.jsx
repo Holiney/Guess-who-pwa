@@ -1,6 +1,5 @@
 export default function GameHeader({
   myName,
-  role,
   opponentName,
   roomId,
   myCharacter,

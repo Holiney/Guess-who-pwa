@@ -27,7 +27,7 @@ import quirrell from "../assets/harrypotter/Quirinus_Quirrell.png";
 export const harryPotterCharacters = [
   { id: 1, name: "Гаррі Поттер", img: harry_potter },
   { id: 2, name: "Рон Візлі", img: ron_weasley },
-  { id: 3, name: "Герміона Грейнджер", img: hermione_granger },
+  { id: 3, name: "Герміона ", img: hermione_granger },
   { id: 4, name: "Альбус Дамблдор", img: albus_dumbledore },
   { id: 5, name: "Северус Снейп", img: severus_snape },
   { id: 6, name: "Лорд Волдеморт", img: lord_voldemort },
@@ -37,7 +37,7 @@ export const harryPotterCharacters = [
   { id: 10, name: "Сіріус Блек", img: sirius_black },
   { id: 11, name: "Ремус Люпин", img: remus_lupin },
   { id: 12, name: "Фред Візлі", img: fred_weasley },
-  { id: 13, name: "Джордж Візлі", img: george_weasley },
+  { id: 13, name: "Джордж ", img: george_weasley },
   { id: 14, name: "Невілл Довгопупс", img: neville_longbottom },
   { id: 15, name: "Віктор Крум", img: viktor_krum },
   { id: 16, name: "Аластор Муді", img: alastor_moody },
