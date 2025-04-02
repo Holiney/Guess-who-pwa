@@ -98,11 +98,13 @@ export default function GamePage() {
         winner: role,
       });
     } else {
-      alert("Невірно. Ти програв.");
       await update(ref(db, `gameRooms/${roomId}`), {
         status: "finished",
         winner: role === "player1" ? "player2" : "player1",
       });
+
+      // Відкриваємо LossModal тільки для програвшого
+      setIsLossModalOpen(true);
     }
 
     setTimeout(() => {
