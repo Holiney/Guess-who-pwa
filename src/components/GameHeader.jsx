@@ -20,9 +20,7 @@ export default function GameHeader({
         <h2 className="text-sm text-gray-500 mb-1">
           Код кімнати: <span className="font-mono">{roomId}</span>
         </h2>
-        <h2 className="text-xl font-semibold mb-1">
-          Ви — {myName} ({role})
-        </h2>
+        <h2 className="text-xl font-semibold mb-1">Ви — {myName}</h2>
         <h3 className="text-md mb-2 text-gray-600">
           Суперник: {opponentName || "Очікуємо..."}
         </h3>
