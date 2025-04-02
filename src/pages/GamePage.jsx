@@ -183,19 +183,6 @@ export default function GamePage() {
           }}
         />
       )}
-
-      <LossModal isOpen={isLossModalOpen} onClose={closeLossModal} />
-      <button
-        onClick={async () => {
-          // Симуляція завершення гри
-          await update(ref(db, `gameRooms/${roomId}`), {
-            status: "finished",
-            winner: "player1", // Задайте winner або player1, або player2 для тесту
-          });
-        }}
-      >
-        Завершити гру для тесту
-      </button>
     </div>
   );
 }
