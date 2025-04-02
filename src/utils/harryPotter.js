@@ -1,53 +1,53 @@
-import barnacle_boy from "../assets/spongebob/barnacle_boy.png";
-import bubble_bass from "../assets/spongebob/bubble_bass.png";
-import cop from "../assets/spongebob/cop.png";
-import cumber_kevin from "../assets/spongebob/cumber_kevin.png";
-import dirty_bubble from "../assets/spongebob/dirty_bubble.png";
-import fred from "../assets/spongebob/fred.png";
-import gary from "../assets/spongebob/gary.png";
-import harold_squarepants from "../assets/spongebob/harold_squarepants.png";
-import karen from "../assets/spongebob/karen.png";
-import krabs from "../assets/spongebob/krabs.png";
-import larry_lobster from "../assets/spongebob/larry_lobster.png";
-import man_ray from "../assets/spongebob/man_ray.png";
-import margaret from "../assets/spongebob/margaret.png";
-import mermaid_man from "../assets/spongebob/mermaid_man.png";
-import mrs_puff from "../assets/spongebob/mrs_puff.png";
-import neptune from "../assets/spongebob/neptune.png";
-import old_djenkins from "../assets/spongebob/old_djenkins.png";
-import patrick from "../assets/spongebob/patrick.png";
-import pearl_krabs from "../assets/spongebob/pearl_krabs.png";
-import pllankton from "../assets/spongebob/pllankton.png";
-import sandy from "../assets/spongebob/sandy.png";
-import sponge_bob from "../assets/spongebob/sponge_bob.png";
-import squidward from "../assets/spongebob/squidward.png";
-import tattletale_strangler from "../assets/spongebob/tattletale strangler.png";
-import triton from "../assets/spongebob/triton.png";
+import alastor_moody from "../assets/harrypotter/Alastor_Moody.png";
+import albus_dumbledore from "../assets/harrypotter/Albus_Dumbledore.png";
+import argus_filch from "../assets/harrypotter/Argus_Filch.png";
+import bill_weasley from "../assets/harrypotter/Bill_Weasley.png";
+import dobby from "../assets/harrypotter/Dobby.png";
+import fred_weasley from "../assets/harrypotter/Fred_Weasley.png";
+import george_weasley from "../assets/harrypotter/George_Weasley.png";
+import griphook from "../assets/harrypotter/Griphook.png";
+import harry_potter from "../assets/harrypotter/Harry_Potter.png";
+import hermione_granger from "../assets/harrypotter/Hermione_Granger.png";
+import lucius_malfoy from "../assets/harrypotter/Lucius_Malfoy.png";
+import lord_voldemort from "../assets/harrypotter/Lord_Voldemort.png";
+import minerva_mcgonagall from "../assets/harrypotter/Minerva_McGonagall.png";
+import moaning_myrtle from "../assets/harrypotter/Moaning_Myrtle.png";
+import neville_longbottom from "../assets/harrypotter/Neville_Longbottom.png";
+import remus_lupin from "../assets/harrypotter/Remus_Lupin.png";
+import rolanda_hooch from "../assets/harrypotter/Rolanda_Hooch.png";
+import ron_weasley from "../assets/harrypotter/Ron_Weasley.png";
+import rubeus_hagrid from "../assets/harrypotter/Rubeus_Hagrid.png";
+import severus_snape from "../assets/harrypotter/Severus_Snape.png";
+import sirius_black from "../assets/harrypotter/Sirius_Black.png";
+import sorting_hat from "../assets/harrypotter/Sorting_Hat.png";
+import vernon_dursley from "../assets/harrypotter/Vernon_Dursley.png";
+import viktor_krum from "../assets/harrypotter/Viktor_Krum.png";
+import quirrell from "../assets/harrypotter/Quirinus_Quirrell.png";
 
 export const harryPotterCharacters = [
-  { id: 1, name: "Гаррі Поттер", img: barnacle_boy },
-  { id: 2, name: "Рон Візлі", img: bubble_bass },
-  { id: 3, name: "Герміона Грейнджер", img: cop },
-  { id: 4, name: "Альбус Дамблдор", img: cumber_kevin },
-  { id: 5, name: "Северус Снейп", img: dirty_bubble },
-  { id: 6, name: "Лорд Волдеморт", img: fred },
-  { id: 7, name: "Драко Малфой", img: gary },
-  { id: 8, name: "Мінерва Макґонеґал", img: harold_squarepants },
-  { id: 9, name: "Сивіла Трелоні", img: karen },
-  { id: 10, name: "Рубеус Геґрід", img: krabs },
-  { id: 11, name: "Сіріус Блек", img: larry_lobster },
-  { id: 12, name: "Ремус Люпин", img: man_ray },
-  { id: 13, name: "Беллатриса Лестранж", img: margaret },
-  { id: 14, name: "Люциус Малфой", img: mermaid_man },
-  { id: 15, name: "Невилл Долгопупс", img: mrs_puff },
-  { id: 16, name: "Джині Візлі", img: neptune },
-  { id: 17, name: "Фред Візлі", img: old_djenkins },
-  { id: 18, name: "Джордж Візлі", img: patrick },
-  { id: 19, name: "Луна Лавґуд", img: pearl_krabs },
-  { id: 20, name: "Чжоу Чанг", img: pllankton },
-  { id: 21, name: "Кінгслі Шеклболт", img: sandy },
-  { id: 22, name: "Німуфана Тонкс", img: sponge_bob },
-  { id: 23, name: "Аластор Муді", img: squidward },
-  { id: 24, name: "Пітер Петіґрю", img: tattletale_strangler },
-  { id: 25, name: "Бартемій Крауч молодший", img: triton },
+  { id: 1, name: "Гаррі Поттер", img: harry_potter },
+  { id: 2, name: "Рон Візлі", img: ron_weasley },
+  { id: 3, name: "Герміона Грейнджер", img: hermione_granger },
+  { id: 4, name: "Альбус Дамблдор", img: albus_dumbledore },
+  { id: 5, name: "Северус Снейп", img: severus_snape },
+  { id: 6, name: "Лорд Волдеморт", img: lord_voldemort },
+  { id: 7, name: "Люциус Малфой", img: lucius_malfoy },
+  { id: 8, name: "Мінерва Макґонеґел", img: minerva_mcgonagall },
+  { id: 9, name: "Рубеус Геґрід", img: rubeus_hagrid },
+  { id: 10, name: "Сіріус Блек", img: sirius_black },
+  { id: 11, name: "Ремус Люпин", img: remus_lupin },
+  { id: 12, name: "Фред Візлі", img: fred_weasley },
+  { id: 13, name: "Джордж Візлі", img: george_weasley },
+  { id: 14, name: "Невілл Довгопупс", img: neville_longbottom },
+  { id: 15, name: "Віктор Крум", img: viktor_krum },
+  { id: 16, name: "Аластор Муді", img: alastor_moody },
+  { id: 17, name: "Роланда Гуч", img: rolanda_hooch },
+  { id: 18, name: "Арґус Філч", img: argus_filch },
+  { id: 19, name: "Вернон Дурслі", img: vernon_dursley },
+  { id: 20, name: "Моана Міртл", img: moaning_myrtle },
+  { id: 21, name: "Сортувальний Капелюх", img: sorting_hat },
+  { id: 22, name: "Джанін Візлі", img: bill_weasley },
+  { id: 23, name: "Квірінус Квірел", img: quirrell },
+  { id: 24, name: "Доббі", img: dobby },
+  { id: 25, name: "Гріпґук", img: griphook },
 ];
