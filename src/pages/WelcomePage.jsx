@@ -90,7 +90,7 @@ export default function WelcomePage() {
           Приєднатися
         </button>
       </div>
-      <p className="fixed bottom-0 mb-5">v0.397</p>
+      <p className="fixed bottom-0 mb-5">v0.398</p>
     </div>
   );
 }

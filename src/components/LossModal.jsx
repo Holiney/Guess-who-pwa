@@ -7,14 +7,14 @@ export default function LossModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <div className="overlay">
-      <div className="modal">
-        <div className="faceWrapper">
-          <img src={sadFace} alt="loss" className="face" />
-          <img src={tear} alt="Tear" className="tear" />
+    <div class="overlay">
+      <div class="modal">
+        <div class="faceWrapper">
+          <img src={sadFace} alt="loss" class="face" />
+          <img src={tear} alt="Tear" class="tear" />
         </div>
-        <h2 className="title">Ти програв...</h2>
-        <button className="button" onClick={onClose}>
+        <h2 class="title">Ти програв...</h2>
+        <button class="button" onClick={onClose}>
           Спробувати ще
         </button>
       </div>
