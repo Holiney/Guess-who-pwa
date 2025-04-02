@@ -56,7 +56,9 @@
 .name {
   font-size: 0.8rem; /* ⬅ Зменшений шрифт */
   font-weight: 700;
+  width: 100%;
   text-align: center;
+  background: hsla(0, 100%, 99%, 0.3);
   margin-bottom: 0.3rem;
   color: #000000;
   position: absolute;
