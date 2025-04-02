@@ -24,15 +24,6 @@ export default function GamePage() {
   const [setName, setSetName] = useState("spongebob");
   const isMyTurn = role === turn;
 
-  const [isLossModalOpen, setIsLossModalOpen] = useState(false);
-
-  // Виведення в консоль для перевірки кнопок
-
-  const closeLossModal = () => {
-    console.log("Модалка програного закрита");
-    setIsLossModalOpen(false); // Закриваємо модалку
-  };
-
   useEffect(() => {
     const uid = auth.currentUser?.uid;
     if (!uid) return;
@@ -102,9 +93,6 @@ export default function GamePage() {
         status: "finished",
         winner: role === "player1" ? "player2" : "player1",
       });
-
-      // Відкриваємо LossModal тільки для програвшого
-      setIsLossModalOpen(true);
     }
 
     setTimeout(() => {
