@@ -113,9 +113,18 @@ export default function GamePage() {
   };
 
   if (status === "finished") {
-    return (
+    const isWinner = winner === role;
+
+    return isWinner ? (
       <VictoryModal
-        winnerName={winner === role ? `${myName} (Ти!)` : opponentName}
+        winnerName={`${myName} (Ти!)`}
+        onExit={() => {
+          remove(ref(db, `gameRooms/${roomId}`));
+          window.location.href = "/";
+        }}
+      />
+    ) : (
+      <LossModal
         onExit={() => {
           remove(ref(db, `gameRooms/${roomId}`));
           window.location.href = "/";
