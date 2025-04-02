@@ -28,13 +28,14 @@ export default function GameHeader({
         </h3>
       </div>
 
-      <div className="flex flex-col items-center gap-2">
+      <div className="flex flex-col items-center ">
         <span className="text-lg font-medium">Твій персонаж:</span>
         <img
           src={myCharacter?.img}
           alt={myCharacter?.name}
           className="h-27 object-contain border rounded"
         />
+        <p>{myCharacter?.name}</p>
       </div>
     </div>
   );

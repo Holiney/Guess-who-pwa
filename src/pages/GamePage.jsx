@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { db, auth } from "../firebase/config";
 import { ref, onValue, set, get, update, remove } from "firebase/database";
-import { characters } from "../utils/characters";
-
+import { getCharactersBySet } from "../utils/characters";
 import GameHeader from "../components/GameHeader";
 import CharacterGrid from "../components/CharacterGrid";
 import ExitModal from "../components/ExitModal";
@@ -20,7 +19,7 @@ export default function GamePage() {
   const [opponentName, setOpponentName] = useState("");
   const [isGuessMode, setIsGuessMode] = useState(false);
   const [showExitConfirm, setShowExitConfirm] = useState(false);
-
+  const [setName, setSetName] = useState("spongebob");
   const isMyTurn = role === turn;
 
   useEffect(() => {
@@ -40,6 +39,9 @@ export default function GamePage() {
       if (data?.currentTurn) setTurn(data.currentTurn);
       if (data?.status) setStatus(data.status);
       if (data?.winner) setWinner(data.winner);
+      if (data?.set) {
+        setSetName(data.set); // Оновлюємо набір карток із Firebase
+      }
 
       const players = data?.players || {};
       Object.entries(players).forEach(([_, p]) => {
@@ -49,14 +51,16 @@ export default function GamePage() {
       });
     });
 
+    const characterList = getCharactersBySet(setName);
     const randomChar =
-      characters[Math.floor(Math.random() * characters.length)];
+      characterList[Math.floor(Math.random() * characterList.length)];
+
     setMyCharacter(randomChar);
     set(
       ref(db, `gameRooms/${roomId}/players/${uid}/character`),
       randomChar.name
     );
-  }, [roomId, role]);
+  }, [roomId, role, setName]);
 
   const toggleExcluded = (id) => {
     setExcluded((prev) => (prev.includes(id) ? prev : [...prev, id]));
@@ -132,7 +136,7 @@ export default function GamePage() {
       </h4>
 
       <CharacterGrid
-        characters={characters}
+        characters={getCharactersBySet(setName)} // Передаємо правильний набір карток
         excluded={excluded}
         isGuessMode={isGuessMode}
         isMyTurn={isMyTurn}

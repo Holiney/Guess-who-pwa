@@ -8,25 +8,25 @@ export default function WelcomePage() {
   const [roomCode, setRoomCode] = useState("");
   const [nickname, setNickname] = useState("");
   const navigate = useNavigate();
-
+  const [selectedSet, setSelectedSet] = useState("spongebob");
   const handleCreate = async () => {
-    if (!nickname.trim()) {
-      alert("Введіть ваш нікнейм");
-      return;
-    }
     const authUser = await signIn();
     const roomId = uuidv4().slice(0, 4).toUpperCase();
+
+    // Важливо: nickname і selectedSet мають бути у state
     await set(ref(db, `gameRooms/${roomId}`), {
       createdAt: Date.now(),
       currentTurn: "player1",
       status: "playing",
+      set: selectedSet, // <-- обраний набір: spongebob або harrypotter
       players: {
         [authUser.user.uid]: {
           role: "player1",
-          nickname: nickname.trim(),
+          nickname,
         },
       },
     });
+
     navigate(`/game/${roomId}`);
   };
 
@@ -59,6 +59,15 @@ export default function WelcomePage() {
         value={nickname}
         onChange={(e) => setNickname(e.target.value)}
       />
+      <label className="mb-1 font-medium">Набір карток</label>
+      <select
+        value={selectedSet}
+        onChange={(e) => setSelectedSet(e.target.value)}
+        className="mb-4 p-2 border rounded"
+      >
+        <option value="spongebob">SpongeBob</option>
+        <option value="harrypotter">Harry Potter</option>
+      </select>
 
       <button
         className="bg-blue-500 text-white px-6 py-2 rounded mb-4"
@@ -81,7 +90,7 @@ export default function WelcomePage() {
           Приєднатися
         </button>
       </div>
-      <p className="fixed bottom-0 mb-5">v0.31</p>
+      <p className="fixed bottom-0 mb-5">v0.34</p>
     </div>
   );
 }
