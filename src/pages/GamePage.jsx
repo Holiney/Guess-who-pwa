@@ -7,6 +7,7 @@ import GameHeader from "../components/GameHeader";
 import CharacterGrid from "../components/CharacterGrid";
 import ExitModal from "../components/ExitModal";
 import VictoryModal from "../components/VictoryModal";
+import LossModal from "../components/LossModal";
 
 export default function GamePage() {
   const { roomId } = useParams();
@@ -22,6 +23,15 @@ export default function GamePage() {
   const [showExitConfirm, setShowExitConfirm] = useState(false);
   const [setName, setSetName] = useState("spongebob");
   const isMyTurn = role === turn;
+
+  const [isLossModalOpen, setIsLossModalOpen] = useState(false);
+
+  // Виведення в консоль для перевірки кнопок
+
+  const closeLossModal = () => {
+    console.log("Модалка програного закрита");
+    setIsLossModalOpen(false); // Закриваємо модалку
+  };
 
   useEffect(() => {
     const uid = auth.currentUser?.uid;
@@ -162,6 +172,8 @@ export default function GamePage() {
           }}
         />
       )}
+
+      <LossModal isOpen={isLossModalOpen} onClose={closeLossModal} />
     </div>
   );
 }

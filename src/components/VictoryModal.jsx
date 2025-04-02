@@ -1,5 +1,5 @@
 import React from "react";
-import "./VictoryModal.css"; // Стилі для анімації
+import "./VictoryModal.module.css"; // Стилі для анімації
 import trophy from "../assets/trophy.png";
 
 const VictoryModal = ({ winnerName, onExit }) => {
@@ -19,7 +19,7 @@ const VictoryModal = ({ winnerName, onExit }) => {
         </div>
       </div>
 
-      <h2 className="victory-message">Переможець: {winnerName} (Ти!)</h2>
+      <h2 className="victory-message">Переможець: {winnerName}</h2>
       <button className="exit-button" onClick={onExit}>
         Вийти
       </button>

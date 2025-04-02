@@ -1,26 +1,23 @@
-import React, { useEffect } from "react";
-import "./LossModal.css"; // Підключити стиль
+import React from "react";
+import styles from "./LossModal.module.css";
+import sadFace from "../assets/loss.png";
+import tear from "../assets/tear.png";
 
-const LossModal = ({ isOpen, onClose }) => {
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden"; // Забороняємо скрол під час показу модалки
-    } else {
-      document.body.style.overflow = "auto"; // Відновлюємо скрол, коли модалка закрита
-    }
-  }, [isOpen]);
+export default function LossModal({ isOpen, onClose }) {
+  if (!isOpen) return null;
 
   return (
-    <div className={`loss-modal ${isOpen ? "show" : ""}`} onClick={onClose}>
-      <div className="modal-content">
-        <div className="loss-container">
-          <div className="loss"></div>
-          <div className="tear"></div>
+    <div className={styles.overlay}>
+      <div className={styles.modal}>
+        <div className={styles.faceWrapper}>
+          <img src={sadFace} alt="loss" className={styles.face} />
+          <img src={tear} alt="Tear" className={styles.tear} />
         </div>
-        <p>Ти програв... Але не здавайся!</p>
+        <h2 className={styles.title}>Ти програв...</h2>
+        <button className={styles.button} onClick={onClose}>
+          Спробувати ще
+        </button>
       </div>
     </div>
   );
-};
-
-export default LossModal;
+}
