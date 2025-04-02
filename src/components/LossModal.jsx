@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./LossModal.module.css";
+import styles from "./LossModal.css";
 import sadFace from "../assets/loss.png";
 import tear from "../assets/tear.png";
 

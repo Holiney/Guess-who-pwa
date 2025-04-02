@@ -1,5 +1,5 @@
 import React from "react";
-import "./VictoryModal.module.css"; // Стилі для анімації
+import "./VictoryModal.css"; // Стилі для анімації
 import trophy from "../assets/trophy.png";
 
 const VictoryModal = ({ winnerName, onExit }) => {
