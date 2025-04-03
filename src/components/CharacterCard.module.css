@@ -37,31 +37,33 @@
   justify-content: flex-end;
   width: 100%;
   height: 100%;
-  background-color: #fff;
   border-radius: 0.5rem;
   overflow: hidden;
+  border: 2px solid #d1d5db;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 0; /* 🔹 Важливо! */
 }
-
 .image {
-  height: 95px;
   width: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  aspect-ratio: auto;
-  min-height: 70px;
-  max-height: 100%;
+  height: 100%;
+  background-size: cover; /* 🔹 Заповнення без спотворення */
+  background-position: center; /* 🔹 Центрування */
+  background-repeat: no-repeat; /* 🔹 Не повторюється */
+  flex-grow: 1; /* 🔹 Розтягується по висоті */
 }
 
 .name {
-  font-size: 0.8rem; /* ⬅ Зменшений шрифт */
-  font-weight: 700;
-  width: 100%;
-  text-align: center;
-  background: hsla(0, 100%, 99%, 0.3);
-  margin-bottom: 0.3rem;
-  color: #000000;
   position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 4px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* 🔹 напівпрозорий фон */
+  color: #fff;
+  z-index: 2;
 }
 
 .back {
