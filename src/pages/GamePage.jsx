@@ -144,27 +144,6 @@ export default function GamePage() {
         handleGuess={handleGuess}
         toggleExcluded={toggleExcluded}
       />
-      <button
-        style={{
-          padding: "10px 20px",
-          backgroundColor: "#ef4444",
-          color: "white",
-          fontSize: "16px",
-          border: "none",
-          borderRadius: "8px",
-          marginTop: "20px",
-          cursor: "pointer",
-        }}
-        onClick={() => {
-          // вручну змінюємо статус гри на finished і задаємо переможця іншого гравця
-          update(ref(db, `gameRooms/${roomId}`), {
-            status: "finished",
-            winner: role === "player1" ? "player2" : "player1",
-          });
-        }}
-      >
-        Імітувати поразку
-      </button>
 
       {isMyTurn && !isGuessMode && (
         <div className="flex justify-between mt-4">
